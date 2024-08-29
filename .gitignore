@@ -1,0 +1,50 @@
+# Geral
+.DS_Store
+Thumbs.db
+*.env
+*.log
+
+# Node.js (shopper-backend)
+shopper-backend/node_modules/
+shopper-backend/npm-debug.log
+shopper-backend/yarn-error.log
+shopper-backend/.env
+shopper-backend/dist/
+shopper-backend/.vscode/
+shopper-backend/logs/
+shopper-backend/whatssapp-session/
+
+# Vue.js (shopper-frontend)
+shopper-frontend/node_modules/
+shopper-frontend/npm-debug.log
+shopper-frontend/yarn-error.log
+shopper-frontend/.env
+shopper-frontend/dist/
+shopper-frontend/.vscode/
+shopper-frontend/.nuxt/
+shopper-frontend/.cache/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sistema Operacional
+*.DS_Store
+*.env
+*.log
+
+# Configurações do Editor
+.idea/
+*.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+#others
+cache/
+data/
+images/
