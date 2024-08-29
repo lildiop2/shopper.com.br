@@ -14,10 +14,10 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // limit each IP to 100 requests per windowMs
-});
+// const limiter = rateLimit({
+//   windowMs: 15 * 60 * 1000, // 15 minutes
+//   max: 100, // limit each IP to 100 requests per windowMs
+// });
 
 //aqui vão as variáveis de rotas
 import v1MeasureRouter from "./v1/routes/measureRoute.js";
@@ -25,7 +25,7 @@ import v1RoleRouter from "./v1/routes/roleRoute.js";
 import v1UserRouter from "./v1/routes/userRoute.js";
 import logger from "./utils/logger.js";
 
-app.use(limiter);
+// app.use(limiter);
 //aplicando CORS
 app.use(cors());
 //we are configuring dist to serve site files
