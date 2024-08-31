@@ -10,7 +10,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
       # MONGO_INITDB_DATABASE: shopper_db
     volumes:
-      # - ./data/:/data/db/
+      - ./data/:/data/db/
       - /etc/timezone:/etc/timezone:ro
 
   mongo-express:
@@ -32,6 +32,9 @@ services:
       - mongo-db
     ports:
       - 8080:8080
+    env_file:
+      - path: ./.env
+        required: true # default
     environment:
       DB_HOST: mongo-db
       DB_PORT: 27017
@@ -41,7 +44,7 @@ services:
       JWT_SECRET: "jwt_secret"
       SECRET: "secret"
       SERVER_URL: "http://localhost:8080"
-      # GEMINI_API_KEY: "api_key" #remove
+    # GEMINI_API_KEY: "api_key" #remove
     links:
       - mongo-db
     volumes:
